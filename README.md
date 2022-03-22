@@ -27,16 +27,6 @@
 - text editor (e.g. VSCode)
 - CLI/terminal
 
-### Clone project repository
-
-```
-git clone git@github.com:virag-ky/To-Do-List.git
-```
-### Open in the browser
-```
-npm start
-```
-
 
 
 ## Authors
