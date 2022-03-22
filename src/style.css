@@ -5,3 +5,65 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+body {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin: 100px 0;
+  font-size: 2.8rem;
+}
+
+section {
+  border: 1px solid gainsboro;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 5px 25px 0 gainsboro;
+}
+
+h2 {
+  width: 100%;
+  font-weight: normal;
+  border-bottom: 1px solid gainsboro;
+  padding: 15px;
+}
+
+input[type="text"] {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid gainsboro;
+  padding: 15px;
+  font-size: 1.1rem;
+}
+
+input[type="text"]:focus {
+  outline: none;
+}
+
+.item {
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid gainsboro;
+  font-size: 1.1rem;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button {
+  width: 100%;
+  border: none;
+  padding: 15px;
+  font-size: 1rem;
+  color: rgb(129, 127, 127);
+}
+
+button:hover {
+  cursor: pointer;
+}

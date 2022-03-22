@@ -21,6 +21,7 @@ const listObjects = [
 window.addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i < listObjects.length; i += 1) {
     const listItem = document.createElement("div");
+    listItem.setAttribute("class", "item");
     const checkbox = document.createElement("input");
     checkbox.type = "checkbox";
     checkbox.name = "name";
