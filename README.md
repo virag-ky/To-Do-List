@@ -27,11 +27,6 @@
 - text editor (e.g. VSCode)
 - CLI/terminal
 
-### Clone project repository
-
-```
-```
-
 
 
 ## Authors
