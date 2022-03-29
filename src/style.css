@@ -37,7 +37,7 @@ h2 {
   color: rgb(78, 77, 77);
 }
 
-#input {
+form {
   display: flex;
   padding: 15px;
   border-bottom: 1px solid gainsboro;
@@ -54,26 +54,30 @@ input[type="text"]:focus {
   outline: none;
 }
 
-.item {
+.todo {
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  padding: 15px;
   border-bottom: 1px solid gainsboro;
+  padding: 15px;
+}
+
+.item {
   font-size: 1.1rem;
   color: rgb(78, 77, 77);
   font-weight: 500;
+  list-style: none;
+  width: 100%;
 }
 
 input[type="checkbox"] {
   margin-right: 20px;
-  width: 25px;
+  width: 30px;
   height: 25px;
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
-  outline: 3px solid rgb(78, 77, 77);
+  outline: 2px solid rgb(78, 77, 77);
 }
 
 input[type="checkbox"]:hover {
@@ -89,6 +93,30 @@ input[type="checkbox"]:checked::after {
   font-weight: 700;
   color: rgb(8, 253, 151);
   background-color: rgb(78, 77, 77);
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.hide {
+  display: none;
+}
+
+.focus {
+  animation: color-change 2s ease-out;
+}
+
+@keyframes color-change {
+  0% {
+    background-color: #fff;
+  }
+  50% {
+    background-color: rgb(8, 253, 151);
+  }
+  100% {
+    background-color: #fff;
+  }
 }
 
 .label {
