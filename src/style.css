@@ -111,9 +111,11 @@ input[type="checkbox"]:checked::after {
   0% {
     background-color: #fff;
   }
+
   50% {
     background-color: rgb(8, 253, 151);
   }
+
   100% {
     background-color: #fff;
   }
@@ -175,10 +177,6 @@ input[type="checkbox"]:checked::after {
 
 #add:hover {
   cursor: pointer;
-}
-
-.hide {
-  display: none;
 }
 
 .show {
