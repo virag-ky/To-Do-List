@@ -9,17 +9,6 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./modules/create-list.js":
-/*!********************************!*\
-  !*** ./modules/create-list.js ***!
-  \********************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nconst listObjects = [\n  {\n    description: 'finish project',\n    completed: false,\n    index: 0,\n  },\n  {\n    description: 'go for a walk',\n    completed: false,\n    index: 1,\n  },\n  {\n    description: 'cook dinner',\n    completed: false,\n    index: 2,\n  },\n];\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (listObjects);\n\n\n//# sourceURL=webpack://to-do-list/./modules/create-list.js?");
-
-/***/ }),
-
 /***/ "./node_modules/css-loader/dist/cjs.js!./src/style.css":
 /*!*************************************************************!*\
   !*** ./node_modules/css-loader/dist/cjs.js!./src/style.css ***!
@@ -147,7 +136,7 @@ eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElem
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* harmony import */ var _modules_create_list_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/create-list.js */ \"./modules/create-list.js\");\n/* eslint-disable */\n\n\n/* eslint-enable */\n\n\n\n\n\nconst listContainer = document.querySelector('#list');\n\nwindow.addEventListener('DOMContentLoaded', () => {\n  for (let i = 0; i < _modules_create_list_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"].length; i += 1) {\n    const listItem = document.createElement('div');\n    listItem.setAttribute('class', 'item');\n    const checkbox = document.createElement('input');\n    checkbox.type = 'checkbox';\n    checkbox.name = 'name';\n    checkbox.id = 'id';\n    checkbox.value = 'value';\n\n    const label = document.createElement('label');\n    label.htmlFor = 'id';\n    label.appendChild(document.createTextNode(_modules_create_list_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"][i].description));\n\n    listItem.appendChild(checkbox);\n    listItem.appendChild(label);\n\n    listContainer.appendChild(listItem);\n  }\n});\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"./node_modules/lodash/lodash.js\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ \"./src/style.css\");\n/* eslint-disable */\n\n/* eslint-enable */\n\n\n\nconst addBtn = document.querySelector(\"#add\");\nconst listContainer = document.querySelector(\"#list\");\nconst listItems = localStorage.getItem(\"list\");\nconst inputText = document.getElementById(\"add-list\");\nconst listObjects = [];\nconst regex = /\\s+/;\n\nfunction setObjects() {\n  if (inputText.value.length === 0 || inputText.value.match(regex)) {\n    return;\n  }\n\n  let object = {};\n  object.description = inputText.value;\n  object.completed = false;\n  listObjects.push(object);\n\n  for (let i = 0; i < listObjects.length; i += 1) {\n    object.index = i + 1;\n  }\n\n  console.log(listObjects);\n}\n\nfunction addList() {\n  listContainer.innerHTML = \"\";\n  for (let i = 0; i < listObjects.length; i += 1) {\n    const listItem = document.createElement(\"div\");\n    listItem.setAttribute(\"class\", \"item\");\n\n    const checkbox = document.createElement(\"input\");\n    checkbox.type = \"checkbox\";\n    checkbox.name = \"name\";\n    checkbox.id = \"id\";\n    checkbox.value = \"value\";\n\n    const label = document.createElement(\"label\");\n    label.htmlFor = \"id\";\n    const text = document.createTextNode(inputText.value);\n    label.appendChild(text);\n\n    listItem.appendChild(checkbox);\n    listItem.appendChild(label);\n    listContainer.appendChild(listItem);\n\n    localStorage.setItem(\"list\", label.textContent);\n  }\n}\n\naddBtn.addEventListener(\"click\", () => {\n  setObjects();\n  addList();\n  inputText.value = \"\";\n});\n\n\n//# sourceURL=webpack://to-do-list/./src/index.js?");
 
 /***/ })
 
