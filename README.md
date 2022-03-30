@@ -2,7 +2,8 @@
 
 # To-Do-List
 
-> A simple to-do-list project with basic styling. The user will be able to add/remove/check from the list.
+> A simple to-do-list project with basic styling. The user can add a task, delete a task, edit a task and delete all completed tasks.
+> The data gets stored in the local storage.
 
 
 ## Built With
@@ -14,8 +15,12 @@
 - modules
 
 ## Screenshot
+### Mobile
+![Screenshot from 2022-03-30 15-21-48](https://user-images.githubusercontent.com/79658534/160833481-9e6753a4-eb8b-4ca7-943e-a083451d44e1.png)
 
-![screencapture-localhost-8080-2022-03-22-18_23_26](https://user-images.githubusercontent.com/79658534/159528013-135ccf90-8b89-4550-8479-32f1e3949a39.png)
+### Desktop
+
+![screencapture-localhost-8080-2022-03-30-15_16_15](https://user-images.githubusercontent.com/79658534/160832818-fd297877-3c64-4430-ab78-c5d48d162a38.png)
 
 
 
