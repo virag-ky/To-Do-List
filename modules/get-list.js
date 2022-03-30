@@ -28,7 +28,15 @@ const getListItems = () => {
 
     const editBtn = document.createElement('button');
     editBtn.setAttribute('type', 'button');
+    editBtn.textContent = 'Edit';
     editBtn.classList.add('edit-button');
+
+    if (task.completed === true) {
+      checkbox.setAttribute('checked', 'checked');
+      listItem.classList.toggle('completed');
+      deleteBtn.classList.toggle('hide');
+      editBtn.classList.toggle('hide');
+    }
 
     div.appendChild(checkbox);
     div.appendChild(listItem);

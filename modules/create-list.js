@@ -42,6 +42,7 @@ const addList = (event) => {
 
   const editBtn = document.createElement('button');
   editBtn.setAttribute('type', 'button');
+  editBtn.textContent = 'Edit';
   editBtn.classList.add('edit-button');
 
   div.appendChild(checkbox);
