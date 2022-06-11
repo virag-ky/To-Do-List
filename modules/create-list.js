@@ -1,4 +1,6 @@
-import { saveToLocalStorage } from "./storage.js";
+import { saveToLocalStorage } from './storage.js';
+
+const listContainer = document.querySelector('#list');
 
 const addList = (inputText) => {
   const regex = /^\s+$/;
@@ -7,7 +9,7 @@ const addList = (inputText) => {
     return;
   }
 
-  const storage = JSON.parse(localStorage.getItem("list")) || [];
+  const storage = JSON.parse(localStorage.getItem('list')) || [];
 
   const object = {
     description: inputText.value.trim(),
@@ -17,41 +19,39 @@ const addList = (inputText) => {
 
   storage.push(object);
 
-  const div = document.createElement("div");
-  div.classList.add("todo");
+  const div = document.createElement('div');
+  div.classList.add('todo');
 
-  const listItem = document.createElement("input");
-  listItem.type = "text";
-  listItem.setAttribute("readonly", "readonly");
+  const listItem = document.createElement('input');
+  listItem.type = 'text';
+  listItem.setAttribute('readonly', 'readonly');
   listItem.value = inputText.value.trim();
 
-  listItem.classList.add("item");
+  listItem.classList.add('item');
 
   saveToLocalStorage(inputText.value.trim());
 
-  const checkbox = document.createElement("input");
-  checkbox.type = "checkbox";
-  checkbox.classList.add("complete");
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.classList.add('complete');
 
-  const deleteBtn = document.createElement("button");
-  deleteBtn.setAttribute("type", "button");
-  deleteBtn.classList.add("delete-button");
+  const deleteBtn = document.createElement('button');
+  deleteBtn.innerHTML = '<i class="fas fa-times"></i>';
+  deleteBtn.setAttribute('type', 'button');
 
-  const editBtn = document.createElement("button");
-  editBtn.setAttribute("type", "button");
-  editBtn.textContent = "Edit";
-  editBtn.classList.add("edit-button");
+  const editBtn = document.createElement('button');
+  editBtn.setAttribute('type', 'button');
+  editBtn.textContent = 'Edit';
+  editBtn.classList.add('edit-button');
 
   div.appendChild(checkbox);
   div.appendChild(listItem);
   div.appendChild(deleteBtn);
   div.appendChild(editBtn);
 
-  const listContainer = document.querySelector("#list");
-
   listContainer.appendChild(div);
 
-  localStorage.setItem("list", JSON.stringify(storage));
+  localStorage.setItem('list', JSON.stringify(storage));
 };
 
-export default addList;
+export { addList, listContainer };

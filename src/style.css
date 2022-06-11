@@ -4,69 +4,67 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: monospace, sans-serif;
 }
 
 body {
   display: flex;
   justify-content: center;
-  flex-direction: column;
   align-items: center;
-  background-color: rgb(211, 209, 209);
-  padding: 0 10px 50px 10px;
+  padding: 80px 0;
+  font-family: monospace, sans-serif;
+  background: #000;
 }
 
-h1 {
-  margin: 100px 0;
-  font-size: 2.8rem;
+i {
+  color: #f65ee0;
+  font-size: 1.8rem;
 }
 
 section {
-  border-left: 2px solid black;
-  border-top: 2px solid black;
-  border-right: 2px solid black;
+  border: thin solid #1495ff;
   width: 90%;
   max-width: 800px;
-  box-shadow: 20px 25px 15px 0 rgb(141, 140, 140);
+  box-shadow: 5px 5px 25px 0 #1495ff;
   border-radius: 5px;
-  background-color: #fff;
+  background-color: #0c002e;
 }
 
 h2 {
   width: 100%;
-  font-weight: 700;
-  border-bottom: 1px solid gainsboro;
+  font-weight: normal;
+  font-size: 1.8rem;
+  border-bottom: 1px solid #1495ff;
   padding: 15px;
+  color: #f65ee0;
 }
 
 form {
   display: flex;
   padding: 15px;
-  border-bottom: 1px solid gainsboro;
+  border-bottom: 1px solid #1495ff;
 }
 
 input[type="text"] {
   width: 100%;
   border: none;
   font-size: 1.4rem;
-  color: rgb(78, 77, 77);
+  color: #0cffd2;
+  background: #0c002e;
 }
 
 input[type="text"]:focus {
   outline: none;
-  background-color: rgb(217, 252, 237);
 }
 
 .todo {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid gainsboro;
+  border-bottom: 1px solid #1495ff;
   padding: 15px;
 }
 
 .item {
   font-size: 1.1rem;
-  color: rgb(78, 77, 77);
   font-weight: 500;
   list-style: none;
   width: 100%;
@@ -74,13 +72,13 @@ input[type="text"]:focus {
 
 input[type="checkbox"] {
   margin-right: 20px;
-  width: 30px;
-  height: 25px;
+  width: 40px;
+  height: 35px;
   -webkit-appearance: none;
   -moz-appearance: none;
   -o-appearance: none;
   appearance: none;
-  outline: 2px solid black;
+  outline: 2px solid #1495ff;
   border-radius: 3px;
 }
 
@@ -93,11 +91,9 @@ input[type="checkbox"]:checked::after {
   height: 100%;
   display: block;
   text-align: center;
-  font-size: 1.4rem;
+  font-size: 2rem;
   font-weight: 900;
-  color: rgb(8, 253, 151);
-  background-color: black;
-  outline: 2px solid black;
+  color: #1495ff;
   border-radius: 3px;
 }
 
@@ -106,20 +102,28 @@ input[type="checkbox"]:checked::after {
 }
 
 .focus {
-  animation: color-change 2s ease-out;
+  animation: color-change 1.5s ease-in-out;
 }
 
 @keyframes color-change {
   0% {
-    background-color: #fff;
+    background-color: #f65ee0;
+  }
+
+  25% {
+    background-color: rgb(177, 56, 201);
   }
 
   50% {
-    background-color: rgb(8, 253, 151);
+    background-color: rgb(125, 28, 173);
+  }
+
+  75% {
+    background-color: rgb(72, 0, 139);
   }
 
   100% {
-    background-color: #fff;
+    background-color: rgb(58, 21, 161);
   }
 }
 
@@ -127,34 +131,27 @@ input[type="checkbox"]:checked::after {
   margin-right: auto;
 }
 
-.delete-button {
-  width: 30px;
-  margin-right: 10px;
-  font-size: 1.2rem;
-  display: block;
-  height: 100%;
-  text-align: center;
-  background-color: transparent;
-  border: none;
+i.fa-times {
+  font-size: 1.6rem;
+  margin: 0 15px;
+  color: #1495ff;
 }
 
-.delete-button::after {
-  content: "\274c";
-}
-
-.delete-button:hover {
+i.fa-times:hover {
   cursor: pointer;
 }
 
-.edit-button {
-  padding: 2px 8px 2px 6px;
-  font-size: 1.2rem;
-  font-weight: 500;
-  display: block;
-  background-color: black;
-  color: rgb(8, 253, 151);
+button {
+  background: transparent;
   border: none;
-  border-radius: 5px;
+}
+
+.edit-button {
+  font-size: 1.2rem;
+  font-weight: 700;
+  background: transparent;
+  color: #1495ff;
+  border: none;
 }
 
 .edit-button:hover {
@@ -162,17 +159,9 @@ input[type="checkbox"]:checked::after {
 }
 
 #add {
-  background-color: black;
+  background-color: transparent;
   border: none;
-  padding: 8px 15px;
-  border-radius: 5px;
-}
-
-#add::after {
-  content: "\002b";
-  font-size: 1.8rem;
-  color: rgb(8, 253, 151);
-  font-weight: 700;
+  width: 30px;
 }
 
 #add:hover {
@@ -185,7 +174,6 @@ input[type="checkbox"]:checked::after {
 
 .show {
   display: block;
-  background-color: black;
   border: none;
   padding: 8px 15px;
 }
@@ -193,7 +181,7 @@ input[type="checkbox"]:checked::after {
 .show::after {
   content: "\21bb";
   font-size: 1.8rem;
-  color: rgb(8, 253, 151);
+  color: #1495ff;
   font-weight: 700;
 }
 
@@ -205,10 +193,10 @@ input[type="checkbox"]:checked::after {
   width: 100%;
   border: none;
   padding: 15px;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 900;
-  color: rgb(253, 45, 8);
-  background-color: black;
+  color: #1495ff;
+  background-color: #0c002e;
 }
 
 #clear-all:hover {

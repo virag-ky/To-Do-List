@@ -1,7 +1,4 @@
-/* eslint-disable */
-import getListItems from "./get-list.js";
-import listContainer from "../src/index.js";
-/* eslint-enable */
+import getListItems from './get-list.js';
 
 const deleteCompleted = () => {
   const storage = JSON.parse(localStorage.getItem('list'));
@@ -9,6 +6,8 @@ const deleteCompleted = () => {
   const newStorage = storage.filter((item) => item.completed === false);
 
   localStorage.setItem('list', JSON.stringify(newStorage));
+
+  const listContainer = document.querySelector('#list');
 
   listContainer.innerHTML = '';
   getListItems();

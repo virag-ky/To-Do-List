@@ -23,8 +23,8 @@ const getListItems = () => {
     checkbox.classList.add('complete');
 
     const deleteBtn = document.createElement('button');
+    deleteBtn.innerHTML = '<i class="fas fa-times"></i>';
     deleteBtn.setAttribute('type', 'button');
-    deleteBtn.classList.add('delete-button');
 
     const editBtn = document.createElement('button');
     editBtn.setAttribute('type', 'button');

@@ -18,7 +18,7 @@ const removeFromLocalStorage = (event) => {
     tasks = JSON.parse(localStorage.getItem('list'));
   }
 
-  const previousItem = event.target.previousSibling.value;
+  const previousItem = event.target.parentElement.previousSibling.value;
 
   for (let i = 0; i < tasks.length; i += 1) {
     if (previousItem === tasks[i].description) {

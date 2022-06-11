@@ -2,8 +2,8 @@ const editItem = (event) => {
   const item = event.target;
 
   if (item.classList[0] === 'edit-button') {
-    const { previousSibling } = item;
-    const previousPreviousSibling = previousSibling.previousSibling;
+    const previousSibling = item;
+    const previousPreviousSibling = previousSibling.previousSibling.previousSibling;
 
     previousPreviousSibling.removeAttribute('readonly');
     previousPreviousSibling.focus();
