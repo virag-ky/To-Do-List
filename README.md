@@ -15,12 +15,8 @@
 - modules
 
 ## Screenshot
-### Mobile
-![Screenshot from 2022-03-30 15-21-48](https://user-images.githubusercontent.com/79658534/160833481-9e6753a4-eb8b-4ca7-943e-a083451d44e1.png)
+![screencapture-virag-ky-github-io-To-Do-List-2022-06-13-12_38_26](https://user-images.githubusercontent.com/79658534/173325690-c15afcb1-13b7-43f8-b1f1-2ce36347c025.png)
 
-### Desktop
-
-![screencapture-localhost-8080-2022-03-30-15_16_15](https://user-images.githubusercontent.com/79658534/160832818-fd297877-3c64-4430-ab78-c5d48d162a38.png)
 
 ## Live Site URL: https://virag-ky.github.io/To-Do-List/
 
